@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Artisan Dubois — Couvreur à Valenciennes (59)</title>
+  <meta name="description" content="Artisan Dubois, couvreur à Valenciennes. Couverture, charpente, zinguerie. Certifié Qualibat et RGE. Devis gratuit. Tél : 06 59 21 57 70.">
+  <link rel="icon" type="image/png" href="img/logo-clean.png">
+  <meta property="og:title" content="Artisan Dubois — Couvreur à Valenciennes (59)">
+  <meta property="og:description" content="Couverture, charpente, zinguerie. Certifié Qualibat et RGE. Devis gratuit.">
+  <meta property="og:image" content="img/logo-clean.png">
+  <meta property="og:type" content="website">
+  <!--
+    DA : Noir #1a1a1a + Rouge #CC0000 (extraites du logo réel Artisan Dubois)
+    Références sectorielles : Artisan BTP — sans-serifs solides, capitales, vibe robuste/terrain/fiable
+    Fonts : Barlow Condensed (titres) + Inter (corps)
+    Assets : logo réel (e-monsite), certifications Qualibat + RGE (réelles)
+    Pas de photos chantier disponibles en ligne — design logo-centric avec icônes SVG
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    html { scroll-behavior: smooth; }
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --rouge: #CC0000;
+      --rouge-fonce: #A00000;
+      --noir: #1a1a1a;
+      --gris-fonce: #333333;
+      --gris: #666666;
+      --gris-clair: #f4f4f2;
+      --blanc: #ffffff;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--gris-fonce);
+      line-height: 1.6;
+      background: var(--blanc);
+    }
+
+    img { max-width: 100%; height: auto; display: block; }
+    a { text-decoration: none; color: inherit; }
+
+    /* NAV */
+    .nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: var(--blanc);
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+      padding: 0 24px;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 72px;
+    }
+    .nav-logo { height: 50px; }
+    .nav-links { display: flex; gap: 28px; align-items: center; }
+    .nav-links a {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 0.95rem; font-weight: 600; color: var(--gris-fonce);
+      text-transform: uppercase; letter-spacing: 0.5px;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--rouge); }
+    .nav-cta {
+      background: var(--rouge); color: var(--blanc) !important;
+      padding: 10px 22px; border-radius: 5px;
+      font-size: 0.85rem; font-weight: 700;
+      transition: background 0.2s;
+    }
+    .nav-cta:hover { background: var(--rouge-fonce); }
+    .nav-burger { display: none; cursor: pointer; flex-direction: column; gap: 5px; }
+    .nav-burger span { display: block; width: 26px; height: 3px; background: var(--gris-fonce); border-radius: 2px; transition: 0.3s; }
+
+    /* HERO */
+    .hero {
+      margin-top: 72px;
+      background: var(--noir);
+      color: var(--blanc);
+      padding: 80px 24px 70px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+      background:
+        repeating-linear-gradient(45deg, transparent, transparent 40px, rgba(255,255,255,0.015) 40px, rgba(255,255,255,0.015) 80px);
+    }
+    .hero-content { position: relative; z-index: 2; max-width: 800px; margin: 0 auto; }
+    .hero-logo { height: 120px; margin: 0 auto 30px; }
+    .hero h1 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 2.8rem; font-weight: 800;
+      text-transform: uppercase; letter-spacing: 2px;
+      margin-bottom: 16px;
+    }
+    .hero h1 .accent { color: var(--rouge); }
+    .hero p {
+      font-size: 1.1rem; color: rgba(255,255,255,0.8);
+      margin-bottom: 10px; max-width: 600px; margin-left: auto; margin-right: auto;
+    }
+    .hero-badges {
+      display: flex; justify-content: center; gap: 20px;
+      margin: 30px 0 35px;
+    }
+    .hero-badges img { height: 55px; background: var(--blanc); border-radius: 8px; padding: 6px; }
+    .hero-cta {
+      display: inline-block;
+      background: var(--rouge); color: var(--blanc);
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 1.1rem; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 1px;
+      padding: 16px 40px; border-radius: 5px;
+      transition: background 0.2s, transform 0.2s;
+    }
+    .hero-cta:hover { background: var(--rouge-fonce); transform: translateY(-2px); }
+    .hero-phone {
+      display: block; margin-top: 18px;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 1.4rem; font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    /* SECTION WAVE SEPARATOR */
+    .wave-sep {
+      display: block; width: 100%;
+    }
+
+    /* SAVOIR-FAIRE */
+    .savoir-faire {
+      padding: 80px 24px;
+      background: var(--blanc);
+    }
+    .container { max-width: 1100px; margin: 0 auto; }
+    .section-title {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 2.2rem; font-weight: 800;
+      text-transform: uppercase; letter-spacing: 1px;
+      color: var(--noir);
+      margin-bottom: 12px;
+    }
+    .section-title .accent { color: var(--rouge); }
+    .section-sub {
+      font-size: 1rem; color: var(--gris);
+      max-width: 600px; margin-bottom: 50px;
+    }
+    .sf-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+    .sf-card {
+      background: var(--gris-clair);
+      border-radius: 12px;
+      padding: 40px 28px 35px;
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+      border-top: 4px solid transparent;
+    }
+    .sf-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+      border-top-color: var(--rouge);
+    }
+    .sf-icon {
+      width: 64px; height: 64px;
+      margin: 0 auto 20px;
+      fill: var(--rouge);
+    }
+    .sf-card h3 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 1.3rem; font-weight: 700;
+      text-transform: uppercase;
+      color: var(--noir);
+      margin-bottom: 10px;
+    }
+    .sf-card p { font-size: 0.9rem; color: var(--gris); line-height: 1.7; }
+
+    /* POURQUOI NOUS */
+    .pourquoi {
+      padding: 80px 24px;
+      background: var(--gris-clair);
+      position: relative;
+    }
+    .pq-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      margin-top: 50px;
+    }
+    .pq-card {
+      background: var(--blanc);
+      border-radius: 10px;
+      padding: 30px 24px;
+      display: flex; gap: 18px; align-items: flex-start;
+      transition: box-shadow 0.3s;
+    }
+    .pq-card:hover { box-shadow: 0 8px 24px rgba(0,0,0,0.06); }
+    .pq-num {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 2.2rem; font-weight: 800;
+      color: var(--rouge);
+      line-height: 1;
+      flex-shrink: 0;
+    }
+    .pq-card h3 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 1.1rem; font-weight: 700;
+      text-transform: uppercase;
+      color: var(--noir);
+      margin-bottom: 6px;
+    }
+    .pq-card p { font-size: 0.88rem; color: var(--gris); line-height: 1.6; }
+
+    /* ZONE */
+    .zone {
+      padding: 80px 24px;
+      background: var(--blanc);
+    }
+    .zone-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: center;
+    }
+    .zone-text h3 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 1.6rem; font-weight: 700;
+      text-transform: uppercase;
+      color: var(--noir);
+      margin-bottom: 16px;
+    }
+    .zone-text p { font-size: 0.95rem; color: var(--gris); margin-bottom: 14px; line-height: 1.7; }
+    .zone-text .highlight {
+      display: inline-block;
+      background: var(--rouge);
+      color: var(--blanc);
+      padding: 4px 12px;
+      border-radius: 4px;
+      font-weight: 600;
+      font-size: 0.85rem;
+    }
+    .zone-map {
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+    }
+    .zone-map iframe { width: 100%; height: 350px; border: 0; }
+
+    /* HORAIRES + CONTACT */
+    .contact {
+      padding: 80px 24px;
+      background: var(--noir);
+      color: var(--blanc);
+    }
+    .contact .section-title { color: var(--blanc); }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      margin-top: 50px;
+    }
+    .horaires h3 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 1.3rem; font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      color: var(--rouge);
+    }
+    .horaires-table { width: 100%; }
+    .horaires-table tr td {
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      font-size: 0.92rem;
+    }
+    .horaires-table tr td:last-child { text-align: right; color: rgba(255,255,255,0.7); }
+    .contact-info h3 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 1.3rem; font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      color: var(--rouge);
+    }
+    .contact-item {
+      display: flex; align-items: center; gap: 14px;
+      margin-bottom: 18px;
+    }
+    .contact-item svg { width: 24px; height: 24px; fill: var(--rouge); flex-shrink: 0; }
+    .contact-item a {
+      font-size: 1rem; color: var(--blanc);
+      transition: color 0.2s;
+    }
+    .contact-item a:hover { color: var(--rouge); }
+    .contact-item span { font-size: 0.95rem; color: rgba(255,255,255,0.8); }
+    .contact-cta {
+      display: inline-block; margin-top: 30px;
+      background: var(--rouge); color: var(--blanc);
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 1.05rem; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 1px;
+      padding: 14px 36px; border-radius: 5px;
+      transition: background 0.2s;
+    }
+    .contact-cta:hover { background: var(--rouge-fonce); }
+
+    /* FOOTER */
+    .footer {
+      padding: 30px 24px;
+      background: #111;
+      text-align: center;
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.4);
+    }
+
+    /* MOBILE */
+    @media (max-width: 768px) {
+      .nav-links { display: none; flex-direction: column; position: absolute; top: 72px; left: 0; right: 0; background: var(--blanc); padding: 20px; gap: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+      .nav-links.open { display: flex; }
+      .nav-burger { display: flex; }
+      .hero { padding: 60px 20px 50px; }
+      .hero h1 { font-size: 1.8rem; }
+      .hero-logo { height: 90px; }
+      .hero-phone { font-size: 1.2rem; }
+      .hero-badges img { height: 42px; }
+      .sf-grid { grid-template-columns: 1fr; }
+      .pq-grid { grid-template-columns: 1fr; }
+      .zone-content { grid-template-columns: 1fr; }
+      .contact-grid { grid-template-columns: 1fr; }
+      .section-title { font-size: 1.7rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <a href="#"><img src="img/logo-clean.png" alt="Artisan Dubois" class="nav-logo"></a>
+    <div class="nav-links" id="navLinks">
+      <a href="#savoir-faire">Savoir-faire</a>
+      <a href="#pourquoi">Engagements</a>
+      <a href="#zone">Zone</a>
+      <a href="#contact" class="nav-cta">Devis gratuit</a>
+    </div>
+    <div class="nav-burger" onclick="document.getElementById('navLinks').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content">
+      <img src="img/logo-clean.png" alt="Artisan Dubois - Couvreur" class="hero-logo">
+      <h1>Couvreur à <span class="accent">Valenciennes</span></h1>
+      <p>Couverture, charpente et zinguerie depuis deux générations. Plus de 15 ans d'expérience au service de votre toiture.</p>
+      <div class="hero-badges">
+        <img src="img/logo-qualibat.png" alt="Certification Qualibat">
+        <img src="img/logo-rge.jpg" alt="Certification RGE">
+      </div>
+      <a href="tel:0659215770" class="hero-cta">Demander un devis gratuit</a>
+      <a href="tel:0659215770" class="hero-phone">06 59 21 57 70</a>
+    </div>
+  </section>
+
+  <!-- WAVE -->
+  <svg class="wave-sep" viewBox="0 0 1440 60" preserveAspectRatio="none" style="display:block;background:var(--blanc)">
+    <path d="M0,60 C360,0 1080,0 1440,60 L1440,0 L0,0 Z" fill="#1a1a1a"/>
+  </svg>
+
+  <!-- SAVOIR-FAIRE -->
+  <section class="savoir-faire" id="savoir-faire">
+    <div class="container">
+      <h2 class="section-title">Notre <span class="accent">savoir-faire</span></h2>
+      <p class="section-sub">Installation, entretien, réparation, rénovation et dépannage : nous intervenons sur tous les aspects de votre toiture.</p>
+      <div class="sf-grid">
+
+        <div class="sf-card">
+          <svg class="sf-icon" viewBox="0 0 64 64"><path d="M32 4L2 28h8v28h12V40h20v16h12V28h8L32 4zm0 7.5L52 28v24h-4V36H16v16h-4V28L32 11.5z"/></svg>
+          <h3>Couverture</h3>
+          <p>Pose et réfection de toitures en tuiles, ardoises ou zinc. Travail soigné et matériaux de qualité pour protéger durablement votre habitat.</p>
+        </div>
+
+        <div class="sf-card">
+          <svg class="sf-icon" viewBox="0 0 64 64"><path d="M32 2L4 30l4 4 4-4v28h16V42h8v16h16V30l4 4 4-4L32 2zm14 54H38V38H26v18H18V27L32 13l14 14v29z"/><rect x="28" y="22" width="8" height="8" rx="1"/></svg>
+          <h3>Charpente</h3>
+          <p>Création, réparation et renforcement de charpentes traditionnelles. Traitement du bois et consolidation des structures existantes.</p>
+        </div>
+
+        <div class="sf-card">
+          <svg class="sf-icon" viewBox="0 0 64 64"><path d="M10 16v32h44V16H10zm40 28H14V20h36v24z"/><path d="M20 28h24v2H20zm0 6h24v2H20zm0 6h16v2H20z"/><path d="M8 10h48v4H8z"/></svg>
+          <h3>Zinguerie</h3>
+          <p>Gouttières, chéneaux, descentes d'eaux pluviales et habillages zinc. Étanchéité parfaite pour évacuer les eaux de pluie efficacement.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- POURQUOI NOUS -->
+  <section class="pourquoi" id="pourquoi">
+    <div class="container">
+      <h2 class="section-title">Pourquoi choisir <span class="accent">Artisan Dubois</span></h2>
+      <div class="pq-grid">
+        <div class="pq-card">
+          <div class="pq-num">01</div>
+          <div>
+            <h3>Deux générations d'expertise</h3>
+            <p>Un savoir-faire transmis de père en fils, plus de 15 ans d'expérience dans le secteur de Valenciennes.</p>
+          </div>
+        </div>
+        <div class="pq-card">
+          <div class="pq-num">02</div>
+          <div>
+            <h3>Certifié Qualibat et RGE</h3>
+            <p>Nos certifications garantissent un travail conforme aux normes en vigueur. Éligible aux aides à la rénovation énergétique.</p>
+          </div>
+        </div>
+        <div class="pq-card">
+          <div class="pq-num">03</div>
+          <div>
+            <h3>Devis et déplacement gratuits</h3>
+            <p>Nous nous déplaçons gratuitement dans un rayon de 30 km autour de Valenciennes pour évaluer vos besoins.</p>
+          </div>
+        </div>
+        <div class="pq-card">
+          <div class="pq-num">04</div>
+          <div>
+            <h3>Interventions rapides</h3>
+            <p>En cas d'urgence (fuite, dégât de tempête), nous intervenons sous 48 heures dans un rayon de 50 km.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ZONE -->
+  <section class="zone" id="zone">
+    <div class="container">
+      <h2 class="section-title">Notre zone <span class="accent">d'intervention</span></h2>
+      <div class="zone-content">
+        <div class="zone-text">
+          <h3>Valenciennes et ses environs</h3>
+          <p>Nous intervenons dans un rayon de <strong>30 km autour de Valenciennes</strong> pour les devis et travaux programmés.</p>
+          <p>Pour les <strong>dépannages urgents</strong>, notre zone s'étend jusqu'à 50 km. Toiture endommagée, infiltration, dégât de tempête : nous réagissons sous 48 heures.</p>
+          <p style="margin-top:8px"><span class="highlight">Devis et déplacement gratuits</span></p>
+        </div>
+        <div class="zone-map">
+          <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=3.45%2C50.30%2C3.60%2C50.41&layer=mapnik&marker=50.3579%2C3.5235" allowfullscreen loading="lazy"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <h2 class="section-title">Contactez-<span class="accent">nous</span></h2>
+      <div class="contact-grid">
+        <div class="horaires">
+          <h3>Horaires d'ouverture</h3>
+          <table class="horaires-table">
+            <tr><td>Lundi — Jeudi</td><td>9h — 12h / 13h — 18h</td></tr>
+            <tr><td>Vendredi</td><td>9h — 18h</td></tr>
+            <tr><td>Samedi — Dimanche</td><td>Fermé</td></tr>
+          </table>
+          <p style="margin-top:20px;font-size:0.88rem;color:rgba(255,255,255,0.6);">Urgences toiture : intervention sous 48h, contactez-nous par téléphone.</p>
+        </div>
+        <div class="contact-info">
+          <h3>Coordonnées</h3>
+          <div class="contact-item">
+            <svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1C10.07 21 3 13.93 3 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.46.57 3.58a1 1 0 01-.24 1.01l-2.21 2.2z"/></svg>
+            <a href="tel:0659215770">06 59 21 57 70</a>
+          </div>
+          <div class="contact-item">
+            <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            <a href="mailto:Duboisbilly26@gmail.com">Duboisbilly26@gmail.com</a>
+          </div>
+          <div class="contact-item">
+            <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1112 7a2.5 2.5 0 010 5z"/></svg>
+            <span>Valenciennes (59)</span>
+          </div>
+          <a href="tel:0659215770" class="contact-cta">Appeler maintenant</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>&copy; 2026 Artisan Dubois — Couvreur à Valenciennes. Tous droits réservés.</p>
+  </footer>
+
+</body>
+</html>
